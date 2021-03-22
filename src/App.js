@@ -2,7 +2,7 @@ import './App.css';
 import React,{useEffect,useState} from "react";
 import {fetchItunesSongs }from './itunesService.js';
 import ListItunes from './composants/ListItunes.js';
-import Search from './composants/Search.js';
+import Search from './composants/search.js';
 import ButtonSearch from './composants/ButtonSearch';
 import { InputGroup ,Card,Alert} from 'react-bootstrap';
 // import DarkModeToggle from "react-dark-mode-toggle";
@@ -26,7 +26,7 @@ function App() {
     return (
       
       <div  id="app" className="bg-white text-black">
-      <Card.Header style={{ background : "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)", textAlign: "center" }}><h1>Itunes Application</h1> </Card.Header>
+      <Card.Header className="header"><h1>Itunes Application</h1> </Card.Header>
       <div  className="d-flex justify-content-center" >
       
       <InputGroup className="mb-3" className="w-50 p-3">
