@@ -15,8 +15,8 @@ ReactDOM.render(
   <React.StrictMode className="h-100 d-inline-block">
     <Router>
   <Switch>
-    <Route exact path="/" component={test}/>
     <Route exact path="/itunes" component={App}/>
+    <Route exact path="/" component={test}/>
     <Route component={PageNotFound}/>
     {/* <Route path="/itunes/:id" component={DetailsMusic} /> */}
   </Switch>
