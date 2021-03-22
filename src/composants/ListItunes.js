@@ -1,5 +1,6 @@
 import React from "react";
 import Music from "./Music";
+import {CardColumns} from 'react-bootstrap';
 
 const ListItunes = ({ response }) => {
      // destructuration
@@ -8,7 +9,7 @@ const ListItunes = ({ response }) => {
 
     return(
 
-          <div>
+        <CardColumns>
 
            {
                response.results.map((x,i)=>{
@@ -16,7 +17,7 @@ const ListItunes = ({ response }) => {
                })
            }
 
-          </div>
+           </CardColumns>
     )
 
 }

@@ -1,4 +1,4 @@
-async function  fetchItunesSongs(term){
+export async function  fetchItunesSongs(term){
 	var API = 'http://localhost:8085/itunes';
 	try {
 		var url = `${API}?term=${term}`;
@@ -9,5 +9,3 @@ async function  fetchItunesSongs(term){
 		console.log(err);
 	}
 };
-
-export default  fetchItunesSongs;

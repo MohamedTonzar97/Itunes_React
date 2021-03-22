@@ -1,24 +1,27 @@
 import React from "react";
 import { Card,CardBody,CardImg,CardFooter,CardTitle,CardText} from 'reactstrap';
-import {Link} from "react-router-dom";
 
-function Music(
+function DetailsMusic(
   
   {
      artistName,
      trackCensoredName,
      previewUrl,
-     artworkUrl100
+     artworkUrl100,
+     collectionName
 }) {
 
 return(
-  <Link to={'/itunes/:nomTrack'}>
-  <Card className="Card" hoverable>
+  
+      <Card className="Card">
      <CardImg  src={artworkUrl100}  alt="Card image cap"  style={{ height: '17rem' }} />
         <CardBody>
         <CardTitle tag="h5">{artistName}</CardTitle>
         <CardText>
             <small className="text-muted">  {trackCensoredName}  </small>
+          </CardText>
+          <CardText>
+            <small className="text-muted">  {collectionName}  </small>
           </CardText>
         </CardBody>
       
@@ -28,10 +31,10 @@ return(
           </audio>
       </CardFooter>
   </Card>
-</Link>
+     
   
          
    )
 }
 
-export default Music;
+export default DetailsMusic;
