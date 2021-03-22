@@ -25,8 +25,8 @@ function App() {
       }
     return (
       
-      <div  id="app" className="bg-dark text-white">
-      <Card.Header style={{ textAlign: "center" }}><h1>Itunes Application</h1> </Card.Header>
+      <div  id="app" className="bg-white text-black">
+      <Card.Header style={{ background : "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)", textAlign: "center" }}><h1>Itunes Application</h1> </Card.Header>
       <div  className="d-flex justify-content-center" >
       
       <InputGroup className="mb-3" className="w-50 p-3">
