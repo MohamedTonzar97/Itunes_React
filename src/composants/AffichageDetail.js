@@ -1,9 +1,8 @@
 import React from "react";
 import Music from "./Music";
 import {CardColumns} from 'react-bootstrap';
-import {Link} from "react-router-dom";
 
-const ListItunes = ({ response }) => {
+const AffichageDetail = ({ response }) => {
      // destructuration
      
    const {results, resultCount}=response;
@@ -13,18 +12,14 @@ const ListItunes = ({ response }) => {
         <CardColumns>
 
            {
-          
                response.results.map((x,i)=>{
-                  return <Music key={i}{...x}/>
+                   return <a key={i} href={'/itunes'}> </a>
                })
-               
            }
-           
-         
+
            </CardColumns>
-     
     )
 
 }
 
-export default ListItunes;
+export default AffichageDetail;

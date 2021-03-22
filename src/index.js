@@ -8,16 +8,17 @@ import "react-jinke-music-player/assets/index.css";
 import {BrowserRouter as Router, Switch,Route,} from "react-router-dom";
 import test from './composants/test';
 import PageNotFound from './composants/pageNotFound';
+import DetailsMusic from './composants/DetailsMusic';
 
 ReactDOM.render(
 
-  <React.StrictMode>
+  <React.StrictMode className="h-100 d-inline-block">
     <Router>
   <Switch>
     <Route exact path="/" component={test}/>
     <Route exact path="/itunes" component={App}/>
     <Route component={PageNotFound}/>
-    <Route path="/itunes/:id" component={App} />
+    <Route path="/itunes/:id" component={DetailsMusic} />
   </Switch>
 </Router>
  </React.StrictMode>,

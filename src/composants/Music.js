@@ -9,15 +9,16 @@ function Music(
      trackCensoredName,
      previewUrl,
      artworkUrl100
-}) {
+}
+
+) {
 
 return(
-  <Link to={'/itunes/:nomTrack'}>
-  <Card className="Card" hoverable>
-     <CardImg  src={artworkUrl100}  alt="Card image cap"  style={{ height: '17rem' }} />
+  <Card className="Card" >
+     <CardImg  src={artworkUrl100}  alt="Card image cap"  style={{ height: '15rem' }} />
         <CardBody>
-        <CardTitle tag="h5">{artistName}</CardTitle>
-        <CardText>
+        <CardTitle tag="h5" style={{ height: '2rem' }}>{artistName}</CardTitle>
+        <CardText style={{ height: '2rem' }}>
             <small className="text-muted">  {trackCensoredName}  </small>
           </CardText>
         </CardBody>
@@ -28,7 +29,7 @@ return(
           </audio>
       </CardFooter>
   </Card>
-</Link>
+
   
          
    )

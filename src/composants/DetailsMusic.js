@@ -13,7 +13,7 @@ function DetailsMusic(
 
 return(
   
-      <Card className="Card">
+      <Card className="Card" >
      <CardImg  src={artworkUrl100}  alt="Card image cap"  style={{ height: '17rem' }} />
         <CardBody>
         <CardTitle tag="h5">{artistName}</CardTitle>

@@ -4,7 +4,7 @@ import {fetchItunesSongs }from './itunesService.js';
 import ListItunes from './composants/ListItunes.js';
 import Search from './composants/Search.js';
 import ButtonSearch from './composants/ButtonSearch';
-import { InputGroup } from 'react-bootstrap';
+import { InputGroup ,Card,Alert} from 'react-bootstrap';
 // import DarkModeToggle from "react-dark-mode-toggle";
 // import  {lightTheme, darkTheme }from './composants/theme';
 
@@ -24,8 +24,11 @@ function App() {
               fetchItunesSongs(search).then(setResponse)
       }
     return (
-      <div>
+      
+      <div  id="app" className="bg-dark text-white">
+      <Card.Header style={{ textAlign: "center" }}><h1>Itunes Application</h1> </Card.Header>
       <div  className="d-flex justify-content-center" >
+      
       <InputGroup className="mb-3" className="w-50 p-3">
       <Search setResponse={setResponse} setSearch={setSearch } handlekeyDown={handlekeyDown} />
       <ButtonSearch search={search} setResponse={setResponse} />
@@ -42,12 +45,14 @@ function App() {
              <ListItunes response={response}/>
            ):(
            <div>
-             <p>Aucun resultat</p>
+           <Alert variant="success">
+            <Alert.Heading>Aucun résultat !!</Alert.Heading>
+            <p>S'il vous plait veuillez saisir d'autres resultat </p>
+          </Alert>
            </div>
            )}
       </InputGroup>
-
-
+   
       </div>
     )
 }
